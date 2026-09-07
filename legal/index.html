@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TryOn Studio — Privacy Policy &amp; Terms of Service</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@500&display=swap');
+
+  :root {
+    --bg: #FAF9FC;
+    --surface: #FFFFFF;
+    --surface-alt: #F1EEF8;
+    --text: #17151F;
+    --text-muted: #5B5766;
+    --border: #E3DEEE;
+    --accent: #6C4FE0;
+    --accent-soft: #EFE9FB;
+    --gold: #96700A;
+    --gold-soft: #FBF1DC;
+    --shadow: 0 1px 2px rgba(23,21,31,0.04), 0 8px 24px rgba(23,21,31,0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1115;
+      --surface: #1A1D24;
+      --surface-alt: #20232B;
+      --text: #F5F6FA;
+      --text-muted: #9A9FAE;
+      --border: #2E323C;
+      --accent: #A48BFF;
+      --accent-soft: rgba(164,139,255,0.14);
+      --gold: #FFC857;
+      --gold-soft: rgba(255,200,87,0.12);
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1115;
+    --surface: #1A1D24;
+    --surface-alt: #20232B;
+    --text: #F5F6FA;
+    --text-muted: #9A9FAE;
+    --border: #2E323C;
+    --accent: #A48BFF;
+    --accent-soft: rgba(164,139,255,0.14);
+    --gold: #FFC857;
+    --gold-soft: rgba(255,200,87,0.12);
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; }
+  h1, h2, h3, .display {
+    font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  .mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  a { color: var(--accent); }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .glyph {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(155deg, var(--accent), #E0AFA0 140%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex: none;
+  }
+  .brand {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .tabs {
+    margin-left: auto;
+    display: flex;
+    gap: 4px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px;
+  }
+  .tabs a {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 6px 13px;
+    border-radius: 999px;
+    transition: background .15s ease, color .15s ease;
+  }
+  .tabs a.active {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+  }
+
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+  }
+
+  .doc-header { margin-bottom: 40px; }
+  .kicker {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1.doc-title {
+    font-size: clamp(28px, 5vw, 38px);
+    font-weight: 800;
+    margin: 0 0 12px;
+    line-height: 1.15;
+  }
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .meta-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--text-muted);
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 9px;
+  }
+
+  .callout {
+    display: flex;
+    gap: 12px;
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 28px 0;
+  }
+  .callout .icon { font-size: 20px; line-height: 1; flex: none; }
+  .callout p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  .callout strong { font-family: 'Manrope', sans-serif; }
+
+  section.clause { margin-top: 40px; }
+  section.clause:first-of-type { margin-top: 0; }
+
+  h2.clause-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  h2.clause-title .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold);
+    background: var(--gold-soft);
+    border-radius: 6px;
+    padding: 2px 7px;
+  }
+
+  p, li {
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: var(--text);
+    max-width: 64ch;
+  }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 22px; margin: 0 0 14px; }
+  li { margin-bottom: 8px; }
+  .muted { color: var(--text-muted); }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+  }
+  table.data-table th, table.data-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.data-table th {
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  #terms { margin-top: 88px; padding-top: 20px; border-top: 2px solid var(--border); }
+
+  footer {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    color: var(--text-muted);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+  }
+
+  ::selection { background: var(--accent-soft); }
+
+  @media (max-width: 520px) {
+    .brand { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="glyph">🕶️</div>
+  <span class="brand">TryOn Studio</span>
+  <nav class="tabs">
+    <a href="#privacy" class="active" data-tab="privacy">Privacy Policy</a>
+    <a href="#terms" data-tab="terms">Terms of Service</a>
+  </nav>
+</div>
+
+<main>
+
+  <article id="privacy">
+    <div class="doc-header">
+      <p class="kicker">Legal · Privacy</p>
+      <h1 class="doc-title">Privacy Policy</h1>
+      <p class="muted" style="max-width:60ch">
+        TryOn Studio ("the app") lets you preview glasses, earrings and necklaces on a photo
+        of yourself. This policy explains what happens to your photos and data when you use it.
+      </p>
+      <div class="meta-row">
+        <span class="meta-pill">Effective 7 Sep 2026</span>
+        <span class="meta-pill">v1.0</span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="icon">📵</span>
+      <p><strong>Your photo never leaves your device.</strong> Face detection runs entirely
+      on-device using Google's ML Kit. We do not have servers that store, view, or process
+      your camera roll or try-on photos.</p>
+    </div>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">1</span> What we collect</h2>
+      <p>The app is designed to work without an account and without sending your photos
+      anywhere. Here is exactly what touches your data, and where it goes:</p>
+      <table class="data-table">
+        <thead>
+          <tr><th>Data</th><th>Purpose</th><th>Leaves your device?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Camera preview / selected photo</td><td>Detect your face and draw the try-on overlay</td><td>No — processed on-device</td></tr>
+          <tr><td>Saved try-on photo</td><td>Only written to your photo library when you tap "Save"</td><td>No</td></tr>
+          <tr><td>Favorites &amp; subscription status</td><td>Remember your picks between sessions</td><td>No — stored locally on your device</td></tr>
+          <tr><td>Advertising identifier</td><td>Show ads to free-tier users, via Google AdMob</td><td>Yes — to Google, see §2</td></tr>
+          <tr><td>Purchase/receipt data</td><td>Validate and manage your Pro subscription, via RevenueCat</td><td>Yes — to RevenueCat, see §2</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">2</span> Third-party services</h2>
+      <p>Two service providers process limited data on our behalf:</p>
+      <ul>
+        <li><strong>Google AdMob</strong> shows banner ads to users on the free tier and may
+        use your device's advertising identifier to do so. You can reset or limit this
+        identifier in your device's ad settings. See
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li><strong>RevenueCat</strong> manages our Pro subscription and receives purchase
+        receipts from the App Store or Google Play to confirm your subscription status. See
+        <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</li>
+      </ul>
+      <p>Neither service ever receives your camera roll, your try-on photos, or the products
+      you tried on.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">3</span> Permissions we ask for</h2>
+      <ul>
+        <li><strong>Camera</strong> — to show you a live preview and take a try-on photo.</li>
+        <li><strong>Photo library (read)</strong> — only if you choose "Choose Photo" instead of the camera.</li>
+        <li><strong>Photo library (write)</strong> — only when you tap "Save" on a finished try-on.</li>
+      </ul>
+      <p>You can revoke any of these at any time in your device settings; the app will simply
+      ask again next time you use the related feature.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">4</span> Children's privacy</h2>
+      <p>TryOn Studio is not directed at children under 13, and we do not knowingly collect
+      personal information from children. If you believe a child has provided data to us
+      through third-party services described above, contact us using §7 and we will act on it.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">5</span> Your choices</h2>
+      <p>Because your photos stay on your device, deleting them is entirely in your hands —
+      remove them from your photo library or uninstall the app to clear locally stored
+      favorites and settings. To manage ad personalization or your subscription, use your
+      device's or app store account settings.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">6</span> Changes to this policy</h2>
+      <p>If this policy changes, we'll update the effective date above. Continuing to use the
+      app after a change means you accept the updated policy.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">7</span> Contact</h2>
+      <p>Questions about this policy or your data:
+      <a href="mailto:REPLACE_WITH_YOUR_SUPPORT_EMAIL">REPLACE_WITH_YOUR_SUPPORT_EMAIL</a>.</p>
+    </section>
+  </article>
+
+  <article id="terms">
+    <div class="doc-header">
+      <p class="kicker">Legal · Terms</p>
+      <h1 class="doc-title">Terms of Service</h1>
+      <p class="muted" style="max-width:60ch">The rules for using TryOn Studio, in plain language.</p>
+      <div class="meta-row">
+        <span class="meta-pill">Effective 7 Sep 2026</span>
+        <span class="meta-pill">v1.0</span>
+      </div>
+    </div>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">1</span> Acceptance</h2>
+      <p>By downloading or using TryOn Studio, you agree to these terms. If you don't agree,
+      please don't use the app.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">2</span> What the app is for</h2>
+      <p>TryOn Studio renders a digital preview of glasses, earrings and necklaces over your
+      photo for entertainment and shopping-inspiration purposes only. Colors, fit, scale and
+      proportions are simulated and may differ from a real product. Don't rely on the preview
+      as an exact representation of any item you may separately purchase elsewhere.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">3</span> Your content</h2>
+      <p>Photos you capture or select stay on your device and under your control at all
+      times (see our <a href="#privacy">Privacy Policy</a>). You're responsible for only
+      photographing yourself or people who've consented to it.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">4</span> Subscriptions</h2>
+      <ul>
+        <li>Pro is an auto-renewing subscription billed through your Apple or Google
+        account at the price shown at checkout.</li>
+        <li>It renews automatically unless cancelled at least 24 hours before the current
+        period ends.</li>
+        <li>Manage or cancel anytime in your App Store or Google Play account settings —
+        we cannot process cancellations directly.</li>
+        <li>Unused portions of a period aren't refunded except where required by law or
+        app store policy.</li>
+      </ul>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">5</span> Acceptable use</h2>
+      <p>Don't reverse-engineer, resell, or use the app to generate content that impersonates,
+      harasses, or misleads others.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">6</span> Disclaimer &amp; liability</h2>
+      <p>The app is provided "as is," without warranties of any kind. Face detection and
+      product placement are automated and may occasionally be inaccurate. To the extent
+      permitted by law, we aren't liable for indirect or incidental damages arising from
+      your use of the app.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">7</span> Changes</h2>
+      <p>We may update these terms as the app evolves; the effective date above will reflect
+      the latest revision.</p>
+    </section>
+
+    <section class="clause">
+      <h2 class="clause-title"><span class="num">8</span> Contact</h2>
+      <p><a href="mailto:REPLACE_WITH_YOUR_SUPPORT_EMAIL">REPLACE_WITH_YOUR_SUPPORT_EMAIL</a></p>
+    </section>
+  </article>
+
+</main>
+
+<footer>
+  TryOn Studio — this page satisfies the Privacy Policy URL required by the Google Play
+  Console and App Store Connect. Replace the contact email above before publishing.
+</footer>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('.tabs a');
+    var sections = ['privacy', 'terms'].map(function (id) { return document.getElementById(id); });
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+      });
+    });
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            tabs.forEach(function (t) {
+              t.classList.toggle('active', t.dataset.tab === id);
+            });
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      sections.forEach(function (s) { if (s) observer.observe(s); });
+    }
+  })();
+</script>
+</body>
+</html>

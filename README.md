@@ -103,9 +103,17 @@ Both are currently clean. Metro bundling has also been verified
    `pro` with a subscription product in App Store Connect / Play Console.
    Until you do this, the app runs in free-tier-only mode automatically
    (no crashes — `purchasePro()` just returns a friendly message).
-4. **Legal** — `SettingsScreen` links to placeholder Privacy Policy/Terms
-   URLs; you need real ones (App Store & Play Store both require this,
-   especially since this app uses the camera and sells subscriptions).
+4. **Legal** — a real Privacy Policy & Terms of Service page for this app
+   lives at `legal/index.html` (`ENV.legalUrl` in `src/config/env.ts`
+   currently points at a hosted copy of it). Before you submit:
+   - Open the file and replace `REPLACE_WITH_YOUR_SUPPORT_EMAIL` (two spots)
+     with a real support address.
+   - Host it somewhere permanent and public — the simplest option is GitHub
+     Pages on this repo: Settings → Pages → deploy from the `legal/` folder
+     (or its own branch), which gives you a stable `https://<user>.github.io/...`
+     URL. Then update `ENV.legalUrl` to point at it and rebuild.
+   - The Play Console's Privacy Policy field needs a URL that's publicly
+     reachable *without login* — double check that before submitting.
 5. **Catalog** — `src/data/products.ts` has 10 placeholder styles. Add
    more, or adjust `baseScale`/colors, without touching any screen code.
 6. **On-device testing** — I was not able to run this on a physical

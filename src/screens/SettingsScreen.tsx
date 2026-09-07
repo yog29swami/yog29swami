@@ -5,6 +5,9 @@ import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import { colors, fontSizes, radii, spacing } from '../theme/tokens';
 import { useAppStore } from '../state/store';
+import { ENV } from '../config/env';
+
+const LEGAL_URL = ENV.legalUrl;
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Settings'>;
 
@@ -14,9 +17,9 @@ export function SettingsScreen({ navigation }: Props) {
   const rows: { label: string; onPress: () => void }[] = [
     { label: isPro ? 'Manage subscription' : 'Upgrade to Pro', onPress: () => navigation.navigate('Paywall') },
     { label: 'Restore purchases', onPress: () => {} },
-    { label: 'Privacy Policy', onPress: () => Linking.openURL('https://example.com/privacy') },
-    { label: 'Terms of Service', onPress: () => Linking.openURL('https://example.com/terms') },
-    { label: 'Contact support', onPress: () => Linking.openURL('mailto:support@example.com') },
+    { label: 'Privacy Policy', onPress: () => Linking.openURL(`${LEGAL_URL}#privacy`) },
+    { label: 'Terms of Service', onPress: () => Linking.openURL(`${LEGAL_URL}#terms`) },
+    { label: 'Contact support', onPress: () => Linking.openURL('mailto:REPLACE_WITH_YOUR_SUPPORT_EMAIL') },
   ];
 
   return (

@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "TryOn Studio",
+    "slug": "tryon-studio",
+    "scheme": "tryonstudio",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tryonstudio.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "TryOn Studio uses your camera so you can see how glasses, earrings and necklaces look on you in real time.",
+        "NSPhotoLibraryUsageDescription": "TryOn Studio needs access to your photos so you can try items on a picture instead of using the camera.",
+        "NSPhotoLibraryAddUsageDescription": "TryOn Studio saves your try-on photos to your library when you tap Save."
+      }
+    },
+    "android": {
+      "package": "com.tryonstudio.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0F1115",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "TryOn Studio uses your camera so you can see how glasses, earrings and necklaces look on you in real time."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "TryOn Studio needs access to your photos so you can try items on a picture instead of using the camera."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow TryOn Studio to access your photos.",
+          "savePhotosPermission": "Allow TryOn Studio to save your try-on photos.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ]
+    ]
+  }
+}

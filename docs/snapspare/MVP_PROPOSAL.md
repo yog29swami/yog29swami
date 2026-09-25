@@ -897,7 +897,19 @@ manual device tests on low-end Android.
 
 ---
 
-## Decisions needed from you before M1
+## Decisions (2026-09-25)
+
+| Decision | Choice |
+|---|---|
+| Launch market | **India-first**, English UI, ₹, Amazon.in / Flipkart / Indian brands |
+| Repository | **New dedicated repo** for the app (created at M1); this doc and the M0 kit live here until then |
+| Platforms | **Web (PWA) + Android** first; iOS later |
+| AI spend cap | **$100/month** during beta (Anthropic Console spend limit + in-app daily kill switch) |
+| Name | Open — "SnapSpare" remains the working name |
+
+M0 kit: [`m0/README.md`](m0/README.md).
+
+## Original open questions
 
 1. **Launch market:** India-first (Amazon.in/Flipkart, ₹ pricing, Indian appliance brands)
    or global/US-first? *Recommendation: India-first, English UI.*

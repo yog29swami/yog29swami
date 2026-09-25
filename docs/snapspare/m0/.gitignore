@@ -1,0 +1,9 @@
+# Test photos are private: never commit them
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.webp
+photos/
+*-a.json
+*-b.json
